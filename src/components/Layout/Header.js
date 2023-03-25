@@ -1,20 +1,19 @@
-import { Fragment } from "react";
-import meal from "../../assets/meal.jpg";
-import classes from './Header.module.css'
+import React from "react";
+import classes from "./Header.module.css";
+import mealsImage from "../../Assests/meals.jpg";
 import HeaderCartButton from "./HeaderCartButton";
-
 
 const Header = (props) => {
   return (
-    <Fragment>
+    <React.Fragment>
       <header className={classes.header}>
-        <h1>MaxMeals</h1>
-        <HeaderCartButton onClick={props.onShowCart}/>
+        <h1>MexMeals</h1>
+        <HeaderCartButton onClick={props.onShowCart} />
       </header>
-      <div className={classes['main-image']} >
-      <img src={meal} alt="delicious food" />
+      <div className={classes["main-image"]}>
+        <img src={mealsImage} alt="A table full of delicious food" />
       </div>
-    </Fragment>
+    </React.Fragment>
   );
 };
 
